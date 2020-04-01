@@ -1,0 +1,82 @@
+\documentclass{article}
+% \documentclass[twoside,twocolumn]{article}
+\usepackage[utf8]{inputenc}
+
+\usepackage{graphicx}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+
+\usepackage[sc]{mathpazo} % use the Palatino font
+\usepackage[T1]{fontenc} % use 8-bit encoding that has 256 glyphs
+\linespread{1.05} % line spacing - Palatino needs more space between lines
+\usepackage{microtype} % slightly tweak font spacing for aesthetics
+
+\usepackage[english]{babel} % language hyphenation and typographical rules
+
+\usepackage[hmarginratio=1:1,top=32mm,columnsep=20pt]{geometry} % document margins
+
+\usepackage{enumitem} % customized lists
+\setlist[itemize]{noitemsep} % make itemize lists more compact
+
+\usepackage{abstract} % allows abstract customization
+\renewcommand{\abstractnamefont}{\normalfont\bfseries} % set the "Abstract" text to bold
+\renewcommand{\abstracttextfont}{\normalfont\small\itshape} % set the abstract itself to small italic text
+
+\usepackage{titlesec} % allows customization of titles
+\renewcommand\thesection{\Roman{section}} % roman numerals for the sections
+\renewcommand\thesubsection{\roman{subsection}} % roman numerals for subsections
+\titleformat{\section}[block]{\large\scshape\centering}{\thesection.}{1em}{} % change the look of the section titles
+\titleformat{\subsection}[block]{\large}{\thesubsection.}{1em}{} % change the look of the section titles
+
+\usepackage{fancyhdr} % headers and footers
+\pagestyle{fancy} % all pages have headers and footers
+\fancyhead{} % blank out the default header
+\fancyfoot{} % blank out the default footer
+
+\usepackage{titling} % Customizing the title section
+
+\usepackage{hyperref} % For hyperlinks in the PDF
+
+% table specs
+\usepackage[hang, small,labelfont=bf,up,textfont=it,up]{caption} % custom captions under/above floats in tables or figures
+\usepackage{booktabs} % horizontal rules in tables
+
+\usepackage{indentfirst}
+\usepackage{amsthm}
+\usepackage{float}
+\usepackage{wrapfig}
+
+
+\title{n-units away curves}
+\author{%
+\textsc{Orion Haunstrup} \\[1ex] % \thanks{footonote} 
+\normalsize University of Rochester \\ 
+\normalsize \href{mailto:orioning@gmail.com}{orioning@gmail.com}
+}
+\date{March 2020}
+
+% \fancyhead[C]{\title $\bullet$ \date} % custom header text
+
+\begin{document}
+
+\maketitle
+
+\input{1-intro}
+\input{2-first-formula}
+\input{3-some-examples}
+\input{4-statement-of-intent}
+\input{5-formal-definitions}
+\input{6-existence-and-uniqueness}
+\input{7-better-formula}
+\input{8-properties}
+\input{9-finding-crunch-spots}
+\input{10-constructed-formula}
+\input{11-beautiful-observation}
+\input{12-solving-divot-paths}
+\input{13-application-railroads}
+\input{14-application-optics}
+\input{15-parametric-polar}
+\input{16-surfaces}
+\input{17-acknowledgement}
+
+\end{document}
