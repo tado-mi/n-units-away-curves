@@ -20,6 +20,20 @@
 \usepackage{float}
 % package to indent the first paragraph in each section
 \usepackage{indentfirst}
+% headers and footers
+\usepackage{fancyhdr}
+
+% use the Palatino font
+\usepackage[sc]{mathpazo}
+% use 8-bit encoding that has 256 glyphs
+\usepackage[T1]{fontenc}
+% line spacing - Palatino needs more space between lines
+\linespread{1.05}
+% slightly tweak font spacing for aesthetics
+\usepackage{microtype}
+
+% custom captions
+\usepackage[hang, small, labelfont=bf, up, textfont=it, up]{caption}
 
 \title{
   N-Units Away Curves
@@ -32,6 +46,13 @@
   University of Rochester \\
   \href{mailto:orioning@gmail.com}{orioning@gmail.com}
 }
+
+% all pages have headers and footers
+\pagestyle{fancy}
+% blank out the default header
+\fancyhead{}
+% custom header text
+\fancyhead[C]{ $N$-Units Away Curves | Orion Haunstrup }
 
 \begin{document}
 
