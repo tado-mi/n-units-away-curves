@@ -1,82 +1,58 @@
 \documentclass{article}
-% \documentclass[twoside,twocolumn]{article}
+
+\usepackage[english]{babel}
 \usepackage[utf8]{inputenc}
 
-\usepackage{graphicx}
-\usepackage{amsfonts}
+% define document margins
+\usepackage[top=30mm, bottom=30mm, right=30mm, left=30mm]{geometry}
+
+% packages to allow for mathematical expressions / fonts / proofs
 \usepackage{amsmath}
-
-\usepackage[sc]{mathpazo} % use the Palatino font
-\usepackage[T1]{fontenc} % use 8-bit encoding that has 256 glyphs
-\linespread{1.05} % line spacing - Palatino needs more space between lines
-\usepackage{microtype} % slightly tweak font spacing for aesthetics
-
-\usepackage[english]{babel} % language hyphenation and typographical rules
-
-\usepackage[hmarginratio=1:1,top=32mm,columnsep=20pt]{geometry} % document margins
-
-\usepackage{enumitem} % customized lists
-\setlist[itemize]{noitemsep} % make itemize lists more compact
-
-\usepackage{abstract} % allows abstract customization
-\renewcommand{\abstractnamefont}{\normalfont\bfseries} % set the "Abstract" text to bold
-\renewcommand{\abstracttextfont}{\normalfont\small\itshape} % set the abstract itself to small italic text
-
-\usepackage{titlesec} % allows customization of titles
-\renewcommand\thesection{\Roman{section}} % roman numerals for the sections
-\renewcommand\thesubsection{\roman{subsection}} % roman numerals for subsections
-\titleformat{\section}[block]{\large\scshape\centering}{\thesection.}{1em}{} % change the look of the section titles
-\titleformat{\subsection}[block]{\large}{\thesubsection.}{1em}{} % change the look of the section titles
-
-\usepackage{fancyhdr} % headers and footers
-\pagestyle{fancy} % all pages have headers and footers
-\fancyhead{} % blank out the default header
-\fancyfoot{} % blank out the default footer
-
-\usepackage{titling} % Customizing the title section
-
-\usepackage{hyperref} % For hyperlinks in the PDF
-
-% table specs
-\usepackage[hang, small,labelfont=bf,up,textfont=it,up]{caption} % custom captions under/above floats in tables or figures
-\usepackage{booktabs} % horizontal rules in tables
-
-\usepackage{indentfirst}
+\usepackage{amsfonts}
 \usepackage{amsthm}
-\usepackage{float}
+% package to include graphics
+\usepackage{graphicx}
+% pachakge to wrap figures into text
 \usepackage{wrapfig}
 
+\usepackage{hyperref}
+% package to use float options such as H in defining the position of a figure
+\usepackage{float}
+% package to indent the first paragraph in each section
+\usepackage{indentfirst}
 
-\title{n-units away curves}
-\author{%
-\textsc{Orion Haunstrup} \\[1ex] % \thanks{footonote} 
-\normalsize University of Rochester \\ 
-\normalsize \href{mailto:orioning@gmail.com}{orioning@gmail.com}
+\title{
+  N-Units Away Curves
 }
-\date{March 2020}
-
-% \fancyhead[C]{\title $\bullet$ \date} % custom header text
+\date{
+  March 28, 2020
+}
+\author{
+  Orion Haunstrup \\
+  University of Rochester \\
+  \href{mailto:orioning@gmail.com}{orioning@gmail.com}
+}
 
 \begin{document}
 
-\maketitle
+  \maketitle
 
-\input{1-intro}
-\input{2-first-formula}
-\input{3-some-examples}
-\input{4-statement-of-intent}
-\input{5-formal-definitions}
-\input{6-existence-and-uniqueness}
-\input{7-better-formula}
-\input{8-properties}
-\input{9-finding-crunch-spots}
-\input{10-constructed-formula}
-\input{11-beautiful-observation}
-\input{12-solving-divot-paths}
-\input{13-application-railroads}
-\input{14-application-optics}
-\input{15-parametric-polar}
-\input{16-surfaces}
-\input{17-acknowledgement}
+  \input{src/01-intro}
+  \input{src/02-first-formula}
+  \input{src/03-some-examples}
+  \input{src/04-statement-of-intent}
+  \input{src/05-formal-definitions}
+  \input{src/06-existence-and-uniqueness}
+  \input{src/07-better-formula}
+  \input{src/08-properties}
+  \input{src/09-finding-crunch-spots}
+  \input{src/10-constructed-formula}
+  \input{src/11-beautiful-observation}
+  \input{src/12-solving-divot-paths}
+  \input{src/13-application-railroads}
+  \input{src/14-application-optics}
+  \input{src/15-parametric-polar}
+  \input{src/16-surfaces}
+  \input{src/17-acknowledgements}
 
 \end{document}
