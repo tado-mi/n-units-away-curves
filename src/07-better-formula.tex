@@ -1,0 +1,30 @@
+\newcommand\bvec{\langle -f'(t), 1 \rangle}
+
+\newcommand{\betterFormula}{
+
+  \begin{equation} \tag{2}
+    f_N(t) =
+    \begin{bmatrix}
+      x_N(t) \\
+      y_N(t)
+    \end{bmatrix} =
+    \begin{bmatrix}
+        t \\ f(t)
+    \end{bmatrix} +
+    \dfrac{N}{|\bvec|} \bvec
+  \end{equation}
+
+}
+
+\renewcommand\bvec{\langle -f'(x_o), 1 \rangle}
+
+\section{A Better Formula}
+
+Next up, let’s establish rigorously a \textit{much} nicer parametric formula for the $N$-Units Away Curves. I figured this out after taking Multivariable Calc in college, and it’s a \textit{huge} improvement over my original high school formula.
+
+Pick some $x_o \in \mathbb{R}$. There is exactly one point on the curve $y = f(x)$ corresponding to that location, namely $(x_o , f(x_o))$. A nice simple vector pointing in the direction of the tangent line to $y = f(x)$ at $x = x_o$ is $\langle 1, f'(x_o) \rangle$. Thus a nice simple vector
+pointing in the direction of the normal line to $y = f(x)$ at $x = x_o$ is $\langle -f'(x_o), 1 \rangle$.
+
+We want to establish a vector which points ``up'' along that normal line, but note that now unlike before we do not need to switch signs based on the sign of $f'(x_o)$! Also note that there is no longer any divide by zero issue encountered when $f'(x_o) = 0$. Nice! We want to have a unit normal vector: $\dfrac{\bvec}{|\bvec|}$ and then multiply this by N to get a vector that literally points from $(x_o, f(x_o))$ to a spot $N$ units away and in the ``up'' direction of the normal line to $y = f(x)$ at $x = x_o$. This gives us a \textit{vastly} new and improved version of the formula for $N$-Units Away Curves:
+
+\betterFormula

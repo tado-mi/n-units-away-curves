@@ -1,0 +1,146 @@
+\section{Properties}
+
+\begin{theorem}
+
+  $N$-Units Away Curves have parametric continuity aka the curve has no gaps (even though it might well exhibit kinks or sharp bends.) Note: This, to me, is what lets us call them $N$-Units Away ``\textit{Curves}''.
+
+\end{theorem}
+
+% new vector with x_o
+\newcommand\vo{
+  % vector
+  \newcommand\votemp{\langle -f'(x_o), 1 \rangle}
+  \votemp \dfrac{ N }{ |\votemp| }
+}
+
+% new vector with x_n
+\newcommand\vn{
+  % vector
+  \newcommand\vntemp{\langle -f'(x_n), 1 \rangle}
+  \vntemp \dfrac{ N }{ |\vntemp| }
+}
+
+\begin{proof}
+
+  Take some point $(x_o, f(x_o))$ on the curve $y = f(x)$. It’s associated point on the $N$-Units Away Curve is $
+  \begin{bmatrix}
+    x_o \\
+    f(x_o)
+  \end{bmatrix} + \vo$.
+
+  Take some sequence of $\mathbb{R}$ values $(x_n)_{n \geq 1} \ni x_n \xrightarrow{} x_o$. Does the point on the $N$-Units away curve associated with $t = x_n, n = 1, 2, 3...$ approach that associated with $t = x_o$ as $n \xrightarrow{} \infty$? If it does, then by classical principles of Real Analysis we’ll know that the $N$-Units Away Curves have parametric continuity. Let’s see if that’s true.
+
+  Consider $(x_n, f(x_n))$ as $n \xrightarrow{} \infty$. $x_n \xrightarrow{} x_o$. $f$ is twice differentiable and thus is also continuous, so we know that $f(x_n) \xrightarrow{} f(x_o)$. Thus $(x_n, f(x_n)) \xrightarrow{} (x_o, f(x_o))$.
+
+  What of the vector $\vo$ as $n \xrightarrow{} \infty$? Since $f$ is twice differentiable that implies that $f'$ is continuous. Thus $f'(x_n) \xrightarrow{} f'(x_o)$. Putting this all together we arrive at as $n \xrightarrow{} \infty$, $
+  \begin{bmatrix}
+    x_n \\
+    f(x_n)
+  \end{bmatrix} + \vn
+  \xrightarrow{}
+  \begin{bmatrix}
+    x_o \\
+    f(x_o)
+  \end{bmatrix} + \vo$.
+
+  Thus the point on the $N$-Units Away Curve associated with $t = x_n$ approaches the point on the $N$-Units Away Curve for $t = x_o$ as $n \xrightarrow{} \infty$. The $N$-Units Away Curves are parametrically continuous.
+
+\end{proof}
+
+Before introducing the next three theorems, we’re going to take a moment and glance back at my little kid idea of drawing curves that stay the same distance away from each other. I mentioned on page 2 of this paper that ``as a child doodling, it seemed natural to then repeat the process and draw another curve that lay the same distance away from this new curve. I’d repeat the process a whole bunch of times.'' (figure $\ref{intro:4}$). There is a quiet assumption going on here though. My little kid self was actually making a second $N$-Units Away Curve \textit{from the original} $N$-Units Away Curve and then repeating that process. My adult mathematician self asks: can you make an $N$-Units Away Curve from an $N$-Units Away Curve? And if so, what is the result of the process? We shall build up to this over the course of the next three theorems.
+
+\begin{theorem}
+
+  $N$-Units Away Curves, as parametric curves, are differentiable.
+
+\end{theorem}
+
+% x_N'(t)
+\newcommand{\xdern}{
+  1 - N f''(t) ((-f'(t))^2 + 1)^{-1/2} + \dfrac{N}{2} f'(t) ( (-f'(t))^2 + 1) ^ {-3/2} (2 f'(t) f''(t))
+}
+
+% y_N'(t)
+\newcommand{\ydern}{
+  f'(t) - \dfrac{N}{2} f'(t) ((-f'(t))^2 + 1) ^ {-3/2} (2 f'(t) f''(t))
+}
+
+% new vector with t
+\newcommand\vt{
+  % vector
+  \newcommand\vttemp{\langle -f'(t), 1 \rangle}
+  \vttemp \dfrac{ N }{ |\vttemp| }
+}
+
+
+\begin{proof}
+
+  \begin{equation*}
+    f_N(t) =
+    \begin{bmatrix}
+      x_N(t) \\
+      y_N(t)
+    \end{bmatrix} =
+    \begin{bmatrix}
+      t \\
+      f(t)
+    \end{bmatrix} + \vt =
+    \begin{bmatrix}
+      t - N f'(t) ((-f'(t))^2 + 1)^{-1/2} \\
+      f(t) + N f'(t) ((-f'(t))^2 + 1)^{-1/2}
+    \end{bmatrix}
+  \end{equation*}
+
+  We can take this and derive each component:
+
+  $x_N'(t) = \xdern$
+
+  $y_N'(t) = \ydern$
+
+  Note that these both always exist and are finite $\forall t \in (- \infty, \infty)$, thus giving us that the $N$-Units Away Curves are differentiable.
+
+\end{proof}
+
+\begin{theorem}
+
+  For a given value of $t$, call it $t_o$, the $N$-Units Away Curve’s parametric derivative at $t$, aka $\dfrac{dy}{dx} = \dfrac{y_N'(t)}{x_N'(t)}$ is always equal to the derivative of the original curve at $t$, $f'(t)$. This is true regardless of the choice of $N$. Stated more precisely, $\forall t \land \forall N, y_N'(t) = f'(t) x_N'(t)$. (A conjecture first proposed by John Ennis.)
+
+\end{theorem}
+
+\begin{proof}
+
+  $\forall t \land \forall N$,
+  \begin{align*}
+    LHS = & y_N'(t) = \ydern \\
+    RHS = & x_N'(t) = \xdern
+  \end{align*}
+
+  Frankly? Yuck. Why in the world would these two massive equations always equal each other? Let’s proceed forward slowly and thoughtfully and establish that they are, in fact, equivalent. As $((-f'(t))^2 + 1) ^ {-3/2}$ can never achieve a value of 0, we can safely multiply both sides by it to obtain:
+  \begin{align*}
+    LHS = & f'(t) ((-f'(t))^2 + 1) ^ {-3/2} - N f'(t) f''(t) \\
+    RHS = & x_N'(t) = f'(t) ((-f'(t))^2 + 1) ^ {-3/2} - N f'(t) f''(t) ((f'(t) ^ 2 + 1) + N (f'(t))^3 f''(t)
+  \end{align*}
+
+  And subtract $((-f'(t))^2 + 1) ^ {-3/2}$ from both sides. In the case that $N = 0$, then \textit{of course} the derivative of the $N$-Units Away Curve is the same as that of the original function. The $0$-Units Away Curve is the original function! In the case that $N \neq 0$, we can divide both sides by -$N$, giving us:
+  \begin{align*}
+    LHS = & f'(t)f''(t) \\
+    RHS = & f'(t)f''(t) ((f'(t))^2 + 1) - ((f'(t))^3 f''(t) = f'(t)f''(t)
+  \end{align*}, confirming the theorem.
+
+\end{proof}
+
+\begin{theorem}
+
+  The $N_2$-Units Away Curve of the $N_1$-Units Away Curve of $y = f(x)$ is precisely the $(N_1 + N_2)$-Units Away Curve of $y = f(x)$.
+
+\end{theorem}
+
+\begin{proof}
+
+  The fact that all the $N$-Units Away Curves share the same derivative for the same value of t implies that they all share the same normal line. The only case where this might not be true is very specifically when $x_N'(t) = 0$. But then by $y_N'(t) = f'(t) x_N'(t)$ we have that $y_N'(t)$ is also 0. But that means that the $N$-Units Away Curve is not even ``drawing more line'' at that t value. The $N$-Units Away Curve has briefly stopped. The instant that it resumes motion, it will once again be cut at $90 ^{\circ}$ by the normal line.
+
+  Thus since the normal line to the original curve at $x = x_o$ cuts through all of the $N$-Units Away Curves precisely at a $90^{\circ}$ angle, we can see that moving $N_1$ units along this normal line and then moving $N_2$ units further along this same line is equivalent to moving $(N_1 + N_2)$ units along the normal line from the original curve. Thus the $N_2$-Units Away Curve \textit{of} the $N_1$-Units Away Curve of $y = f(x)$ is precisely the $(N_1 + N_2)$-Units Away Curve of $y = f(x)$.
+
+\end{proof}
+
+Ok... Now on to the main topics of this paper.

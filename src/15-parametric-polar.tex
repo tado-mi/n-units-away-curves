@@ -1,0 +1,153 @@
+\renewcommand\figuresI{
+
+  \renewcommand\w{0.4\linewidth}
+  \renewcommand\fw{0.9\textwidth}
+
+  \begin{figure}[H]
+    \begin{minipage}[b]{\w}
+      \centering
+      \label{parametric:2}
+      \includegraphics[width=\fw]{img/15-parametric/02.png}
+      \caption{Caption}
+      \vspace{4ex}
+    \end{minipage} % end
+    \begin{minipage}[b]{\w}
+      \centering
+      \label{parametric:3}
+      \includegraphics[width=\fw]{img/15-parametric/03.png}
+      \caption{Caption}
+      \vspace{4ex}
+    \end{minipage} % end
+    \begin{minipage}[b]{\w}
+      \centering
+      \label{parametric:4}
+      \includegraphics[width=\fw]{img/15-parametric/04.png}
+      \caption{Caption}
+      \vspace{4ex}
+    \end{minipage} % end
+    \begin{minipage}[b]{\w}
+      \centering
+      \label{parametric:5}
+      \includegraphics[width=\fw]{img/15-parametric/05.png}
+      \caption{Caption}
+      \vspace{4ex}
+    \end{minipage} % end
+    \begin{minipage}[b]{\w}
+      \centering
+      \label{parametric:6}
+      \includegraphics[width=\fw]{img/15-parametric/06.png}
+      \caption{Caption}
+      \vspace{4ex}
+    \end{minipage} % end
+  \end{figure}
+
+}
+
+\renewcommand\figuresII{
+
+  \renewcommand\w{0.4\linewidth}
+  \renewcommand\fw{0.9\textwidth}
+
+  \begin{figure}[H]
+    \centering
+    \begin{minipage}[b]{\w}
+      \centering
+      \label{parametric:7}
+      \includegraphics[width=\fw]{img/15-parametric/07.png}
+      \caption{Caption}
+      \vspace{4ex}
+    \end{minipage} % end
+    \begin{minipage}[b]{\w}
+      \centering
+      \label{parametric:8}
+      \includegraphics[width=\fw]{img/15-parametric/08.png}
+      \caption{Caption}
+      \vspace{4ex}
+    \end{minipage} % end
+    \begin{minipage}[b]{\w}
+      \centering
+      \label{parametric:9}
+      \includegraphics[width=\fw]{img/15-parametric/09.png}
+      \caption{Caption}
+      \vspace{4ex}
+    \end{minipage} % end
+    \begin{minipage}[b]{\w}
+      \centering
+      \label{parametric:10}
+      \includegraphics[width=\fw]{img/15-parametric/10.png}
+      \caption{Caption}
+      \vspace{4ex}
+    \end{minipage} % end
+  \end{figure}
+
+}
+
+\newcommand{\finalFormula}{
+
+
+}
+
+\section{The Parametric Case and the Polar Case}
+
+Suppose you want to study the $N$-Units Away Curves of a curve, but you do not have it in a simple closed $y = f(x)$ form but instead you have a parametric function $
+\begin{bmatrix}
+  x(t) \\
+  y(t)
+\end{bmatrix} =
+\begin{bmatrix}
+  g(t) \\
+  h(t)
+\end{bmatrix} $. Can you still find the $N$-Units Away Curves to that parametric curve in $\mathbb{R}^2$?
+
+I had always hoped I might be able to solve for the $N$-Units Away Curves in the case, and in fact I have been able to! So long as functions $g$ and $h$ are differentiable.
+
+Take some value of $t$. Call it $t_o$. The slope of the parametric curve at location $t = t_o$ is $ \dfrac{dy}{dx} =
+\dfrac{\dfrac{dy}{dt}}{\dfrac{dy}{dt}} = \dfrac{y'(t)}{x'(t)} = \dfrac{h'(t)}{g'(t)} $. Take note, of course, that this formula is only valid so long as $g'(t) \neq 0$. Suspend your disbelief for the moment and simply ignore those values of $t$. The final formula will address them.
+
+Where before we had: $\begin{bmatrix} x \\ y \end{bmatrix} = \begin{bmatrix} t \\ f'(t) \end{bmatrix} + N \dfrac{\begin{bmatrix} -f'(t) \\ 1 \end{bmatrix}}{|\begin{bmatrix} -f'(t) \\ 1 \end{bmatrix}|}$, now replace every occurrence of $f'(t)$ with $\dfrac{h'(t)}{g'(t)}$ to get $\begin{bmatrix} x \\ y \end{bmatrix} = \begin{bmatrix} 1 \\ \dfrac{h'(t)}{g'(t)} \end{bmatrix} + N \dfrac{\begin{bmatrix} \dfrac{-h'(t)}{g'(t)} \\ 1 \end{bmatrix}}{\left| \begin{bmatrix} \dfrac{-h'(t)}{g'(t)} \\ 1 \end{bmatrix} \right|}$, when $g' \neq 0$.
+
+However, when you graph the results, we find that like with formula 1 for the $N$-Units Away Curves, there is a problem where the graph we've so far made flips which side of the original parametric function we're on. It
+switches sides inappropriately every time $g'(t)$ changes sign. Fixing this is a problem we have already previously encountered in this paper and can be rectified by multiplying by a $\dfrac{g'(t)}{|g'(t)|}$ term.
+
+\renewcommand\w{0.9\linewidth}
+
+\begin{figure}[h]
+  \begin{minipage}[b]{\w}
+      \centering
+      \label{parametric:1}
+      \includegraphics[width=\w]{img/15-parametric/01.png}
+      \caption{Caption}
+  \end{minipage}
+\end{figure}
+
+This leaves us with one last big problem which is these discontinuities when $g'(t) = 0$. Let's see if we can invent a suitable $N$-Units Away formula that is defined even at those values.
+
+Let's assume we have a positive value for $N$. With the original $y = f(x)$ $N$-Units Away Curve, I've described that you can think of $y = f(x)$ as being equivalent to the parametric function $
+\begin{bmatrix}
+  x(t) \\
+  y(t)
+\end{bmatrix} =
+\begin{bmatrix}
+  1 \\
+  f(t)
+\end{bmatrix} $. In this case the parametric function's $x$ term is always moving to the right, and the $N$-Units Away Curve is defined as being above the curve. It's a fairly natural extension to say that in the $
+\begin{bmatrix}
+  x(t) \\
+  y(t)
+\end{bmatrix} =
+\begin{bmatrix}
+  g(t) \\
+  h(t)
+\end{bmatrix} $ case when the $x$ term is moving to the left we should define the $N$-Units Away Curve to be below the curve. In fact we just did this on the previous page with our $\dfrac{g'(t)}{|g'(t)|}$ term. When the function is going \textit{East} the $N$-Units Away Curves are placed \textit{North}. When the function is going \textit{West} the $N$-Units Away Curves are placed \textit{South}. It's always a $90^{\circ}$ turn to the left. By extension, when the function is going straight vertically \textit{North}, define that we should place the associated $N$-Units Away dot to the \textit{West}, and when the function is going straight vertically \textit{South}, define that we should place the $N$-Units Away dot to the \textit{East}. All discontinuities have thus been addressed and we arrive at the following final formula:
+
+\finalFormula
+
+The resultant graphs we obtain are profoundly cool looking! Check out the example of $g(t) = sin (7 \pi t)$, $h(t) = cos (5 \pi t)$ as $N$ increases from 0 up:
+
+\figuresI
+
+Fabulously enough, this instantly also solves the case of Polar Functions as well! Suppose instead of a function $y = f(x)$, you have some polar function $r(\theta) = g(\theta)$. It’s a nice little Calc 2 fact that polar functions can be represented as parametric equations by performing $r(\theta) = g(\theta) \xrightarrow{} (x(t), y(t)) = (g(t) cos(t), g(t) sin(t))$.
+
+We can now plug this into our solution to the parametric case and obtain truly beautiful Polar $N$-Units Away Curves. Here is a gorgeous example. Let $r(\theta) = sin(\dfrac{8}{5} \theta)$. One ends up with the following $N$-Units Away Curve:
+
+\figuresII

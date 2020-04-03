@@ -1,0 +1,43 @@
+\section{Introduction}
+
+This paper will examine a mathematics theory I’ve been working on for quite some time. I call it the study of ``$N$-Units Away Curves''. I actually first discovered this fascinating little enigma in my doodles when I was perhaps only five or six years old. The particular little geometric phenomenon I discovered was really interesting, and I couldn’t explain it at the time. All these years later as a grown man and mathematician, it gives me a nice feeling of catharsis to finally rigorously address this question and comprehend its mysteries.
+
+% define a variable w for the width of the section for a figure
+\newcommand\w{.40\linewidth}
+% define a variable fw for the width of a figure with respect to the line its in
+\newcommand\fw{.90\textwidth}
+
+\begin{figure}[H] % [H]: insert the figure 'here!', in this position in the code, overriding compiler preferences
+  \centering % center the set of figures with the respect to the page
+  \begin{minipage}[b]{\w} % begin a section for one figure
+    \centering % center one figure with respect to its section
+    \includegraphics[width=\fw]{img/01-intro/01.png}
+    \caption{A squiggle}
+    \vspace{4ex}
+  \end{minipage} % end
+  \begin{minipage}[b]{\w}
+    \centering
+    \label{intro:2}
+    \includegraphics[width=\fw]{img/01-intro/02.png}
+    \caption{Caption}
+    \vspace{4ex}
+  \end{minipage} % end
+  \begin{minipage}[b]{\w}
+    \centering
+    \label{intro:3}
+    \includegraphics[width=\fw]{img/01-intro/03.png}
+    \caption{Caption}
+    \vspace{4ex}
+  \end{minipage} % end
+  \begin{minipage}[b]{\w}
+    \centering
+    \label{intro:4}
+    \includegraphics[width=\fw]{img/01-intro/04.png}
+    \caption{Caption}
+    \vspace{4ex}
+  \end{minipage} % end
+\end{figure}
+
+As a little kid I discovered the following phenomenon in my doodles... Draw a curve. Any curve. A squiggle on a page will suffice. An example is provided in Figure $\ref{intro:1}$. It felt natural as a little kid to then draw another curve next to it that was the same distance away from the first at all points. (Fig $\ref{intro:2}$) Note that this is very different than what is more typically encountered in mathematics: two curves like $y = sin(4x)$ and $y = sin(4x) + 1$ are such that the second curve always remains 1 unit away from the first specifically in the $y$-direction (Fig $\ref{intro:3}$)... This is not what my little kid self meant at all. Imagine rolling a marble through the little ``tube'' that lies between $y = sin(4x)$ and $y = sin(4x) + 1$. At some points the little tube is wide and fat, at other points the tube gets very skinny and narrow. This is fundamentally different from the idea my kid self wanted us to do which was to take a curve and draw a $2^{nd}$ one next to it that would create a perfect nice little tube... a tube with the same diameter at all spots (see Figure $\ref{intro:2}$).
+
+As a child doodling, it seemed natural to then repeat the process and draw another curve that lay the same distance away from this new curve. I’d repeat the process a whole bunch of times (Fig $\ref{intro:4}$), but then something curious always happened. I had started with a smooth curve. But as I ran the process again and again, inevitably the curves always ``got pointy.'' At first I assumed this was due to inaccuracies in my drawings, so I set out (crayons in hand) to draw these curves very accurately and was absolutely flabbergasted to discover that the phenomenon remained! What in the world was the reason for that? Why were the curves ``getting pointy''? A mystery was born. Many years passed by, and eventually I found myself enrolled in a high school Calculus class. One day we learned about inverse trigonometric functions (specifically) and a little while later it dawned on me... I finally had the mathematical tools I needed to further study these ``curves that lie $N$ units away''! My intent was now to figure out how to program my Pacific Tech Graphing Calculator to be able to take in an arbitrary function $y = f(x)$ and graph the associated curve that lies exactly $N$ units away at all points. I wanted to be able to finally see exactly what these curves looked like. I did so in the following manner.
