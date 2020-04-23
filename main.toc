@@ -1,0 +1,19 @@
+\babel@toc {english}{}
+\contentsline {section}{\numberline {1}Introduction}{3}{section.1}
+\contentsline {section}{\numberline {2}A First Formula}{4}{section.2}
+\contentsline {section}{\numberline {3}Some Examples}{5}{section.3}
+\contentsline {section}{\numberline {4}Statement of Intent}{6}{section.4}
+\contentsline {section}{\numberline {5}Formal Definitions}{8}{section.5}
+\contentsline {section}{\numberline {6}Existence and Uniqueness}{9}{section.6}
+\contentsline {section}{\numberline {7}A Better Formula}{9}{section.7}
+\contentsline {section}{\numberline {8}Properties}{9}{section.8}
+\contentsline {section}{\numberline {9}Finding Crunch Spots}{11}{section.9}
+\contentsline {subsection}{\numberline {9.1}An example}{15}{subsection.9.1}
+\contentsline {section}{\numberline {10}A Constructed Formula for the Snipped N-Units Away Curve}{17}{section.10}
+\contentsline {section}{\numberline {11}A Beautiful Observation}{18}{section.11}
+\contentsline {section}{\numberline {12}Solving Divot Paths}{19}{section.12}
+\contentsline {section}{\numberline {13}Applications Part One - Railroads}{24}{section.13}
+\contentsline {section}{\numberline {14}Applications Part Two - Optics}{25}{section.14}
+\contentsline {section}{\numberline {15}The Parametric Case and the Polar Case}{26}{section.15}
+\contentsline {section}{\numberline {16}The 3-Dimensional Case - N-Units Away Surfaces}{29}{section.16}
+\contentsline {section}{\numberline {17}Acknowledgements}{31}{section.17}

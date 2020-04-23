@@ -15,7 +15,7 @@
 % pachakge to wrap figures into text
 \usepackage{wrapfig}
 
-\usepackage{hyperref}
+\usepackage[hidelinks]{hyperref}
 % package to use float options such as H in defining the position of a figure
 \usepackage{float}
 % package to indent the first paragraph in each section
@@ -57,6 +57,10 @@
 \begin{document}
 
   \maketitle
+  \newpage
+
+  \tableofcontents
+  \newpage
 
   \input{src/01-intro}
   \input{src/02-first-formula}
